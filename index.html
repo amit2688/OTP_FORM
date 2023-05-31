@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP_FORM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="inner">
+            <form name="myForm" onsubmit="return validateForm()">
+            <h1>OTP FORM </h1>
+        <input type="text" id="name" name="text_name" placeholder="Name" onchange="ErrorName()">
+           <p id="error1"></p>
+        <input type="text" id="phone" name="text_phone" placeholder="phone">
+        <p id="error2"></p>
+        <input type="email" id="email" name="text_email" placeholder="email">
+        <p id="error3"></p>
+        <input type="password" id="password" name="text_password" placeholder="password">
+        <p id="error4"></p>
+        <input type="submit" value="Generate OTP" id="OTP" onclick=" return otp_generate()">
+    
+</form>
+</div>
+<div class="mobile">
+  <div class="middle">
+    <div class="camera"></div>
+  </div>
+   <h1 id="mob">MOBILE OTP</h1>
+   <h5 style="margin-top: 300px; margin-left: 20px; font-size: 20px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   ">Developed by Komal & Amit</h5>
+   <h2 id="otp-generate" style="color: rgb(206, 56, 10);"></h2>
+</div>
+</div>
+
+<script>
+ function validateForm(){
+   var name=document.myForm.text_name.value;
+   var phone=document.myForm.text_phone.value
+   var email=document.myForm.text_email.value;
+   var pass=document.myForm.text_password.value
+      if( name.length<6){
+        document.getElementById("error1").innerHTML="Name should not be less than 6 digits"
+        return false
+
+      }
+       else if(phone.length<10){
+        document.getElementById("error2").innerHTML="Invalid Phone Number"
+        return false
+       }
+       else if(pass.length<8){
+        document.getElementById("error4").innerHTML="password should be more than 8 character"
+        return false
+}
+
+ }
+ function otp_generate(){
+  var a=parseInt(Math.random()*(9999-1000)+1000)
+  document.getElementById("otp-generate").innerHTML=a
+  return false
+
+ } 
+
+</script>
+</body>
+</html>

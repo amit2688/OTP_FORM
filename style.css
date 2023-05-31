@@ -1,0 +1,83 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #1c1d5a;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    margin-bottom: 100px;
+    color: rgb(151, 246, 56);
+    font-family: sans-serif;
+    font-weight: 700;
+}
+p{
+color: red;
+font-size: 25px;
+margin-top: 10px;
+margin-left: 5px;
+}
+.inner{
+    display: flex;
+    flex-direction: column;
+    border: 10px solid rgb(152, 66, 57);
+    width: 500px;
+    height: 800px;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    height: 40px;
+    width: 350px;
+    border-radius: 10px;
+    margin-top: 25px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+.middle{
+    margin-left: 100px;
+}
+.mobile{
+    width: 320px;
+    height: 550px;
+    border: 15px solid black;
+    border-radius: 50px;
+    background-color: aqua;
+    margin-left: 200px;
+
+}
+#otp-generate{
+    margin-top: -200px;
+    margin-left: 89px;
+    font-size: 40px;
+
+}
+#mob{
+    color: #1c1d5a;
+    margin-top: 80px;
+    font-size: 25px;
+    margin-left: 60px;
+}
+.middle{
+    background-color: black;
+    width: 100px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 20px;
+}
+.camera{
+    background-color: rgb(96, 97, 98);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
